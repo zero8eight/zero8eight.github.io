@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zero8Eight Studio</title>
+<meta name="description" content="Zero8Eight Studio makes Domino Rush, a fast chain-reaction game for Android: build the domino line faster than the wave can knock it down.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1b1f4b;
+    --deep: #131640;
+    --top: #2b2f7a;
+    --ink: #ffffff;
+    --mist: #c9cdf2;
+    --gold: #ffc93c;
+    --green: #46d36b;
+    --green-edge: #24974a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: linear-gradient(180deg, var(--top) 0%, var(--deep) 70%) fixed;
+    color: var(--ink);
+    font-family: "Nunito", system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  a { color: var(--gold); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 28px 0 8px; }
+  .studio {
+    font-family: "Lilita One", sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .studio span { color: var(--gold); }
+  .game {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 28px;
+    align-items: center;
+    margin: 40px 0 28px;
+  }
+  .game img.icon {
+    width: 160px; height: 160px;
+    border-radius: 36px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+  h1 {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-size: clamp(40px, 7vw, 64px);
+    line-height: 1;
+    margin: 0 0 10px;
+  }
+  h1 span { color: var(--gold); }
+  .tagline { font-size: 20px; color: var(--mist); margin: 0 0 20px; }
+  .play {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    font-family: "Lilita One", sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 12px 26px 10px;
+    border-radius: 18px;
+    border: 4px solid var(--navy);
+    box-shadow: 0 6px 0 var(--green-edge), 0 6px 0 4px var(--navy);
+  }
+  .play:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--green-edge), 0 2px 0 4px var(--navy); }
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 12px 0 36px;
+  }
+  .shots img {
+    width: 100%; height: auto;
+    border-radius: 18px;
+    border: 4px solid var(--navy);
+    display: block;
+  }
+  .modes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .mode {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 16px 18px;
+  }
+  .mode h2 {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0 0 4px;
+    color: var(--gold);
+  }
+  .mode p { margin: 0; color: var(--mist); }
+  footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 22px 0 40px;
+    color: var(--mist);
+    font-size: 15px;
+  }
+  footer p { margin: 4px 0; }
+  @media (max-width: 640px) {
+    .game { grid-template-columns: 1fr; text-align: center; gap: 18px; margin-top: 24px; }
+    .game img.icon { margin: 0 auto; width: 128px; height: 128px; border-radius: 30px; }
+    .shots { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="studio" href="./">Zero8<span>Eight</span> Studio</a>
+    </header>
+
+    <main>
+      <section class="game">
+        <img class="icon" src="domino-rush/icon.png" alt="The Domino Rush icon: a chain of rainbow dominoes" width="160" height="160">
+        <div>
+          <h1>Domino <span>Rush</span></h1>
+          <p class="tagline">Build the domino line faster than the wave can knock it down!</p>
+          <a class="play" href="https://play.google.com/store/apps/details?id=com.zero8eight.dominorush">Get it on Google Play</a>
+        </div>
+      </section>
+
+      <section class="shots" aria-label="Screenshots">
+        <img src="domino-rush/shot-1.jpg" alt="Classic: a line of dominoes outrunning the wave" width="432" height="768" loading="lazy">
+        <img src="domino-rush/shot-2.jpg" alt="The home screen with four ways to play" width="432" height="768" loading="lazy">
+        <img src="domino-rush/shot-3.jpg" alt="Journey: a topple puzzle with portals" width="432" height="768" loading="lazy">
+        <img src="domino-rush/shot-4.jpg" alt="A run on the Sky Isles board" width="432" height="768" loading="lazy">
+      </section>
+
+      <section class="modes">
+        <div class="mode"><h2>Classic</h2><p>Lay tiles and keep your line ahead of the falling wave.</p></div>
+        <div class="mode"><h2>Journey</h2><p>60 hand-made topple puzzles across six worlds.</p></div>
+        <div class="mode"><h2>Gem Rush</h2><p>Race the clock from big gem to big gem.</p></div>
+        <div class="mode"><h2>Gauntlet</h2><p>Pick charms floor after floor and see how deep you go.</p></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact: <a href="mailto:zero8eightstudio@gmail.com">zero8eightstudio@gmail.com</a></p>
+      <p><a href="domino-rush/privacy-policy.html">Domino Rush privacy policy</a></p>
+      <p>&copy; 2026 Zero8Eight Studio</p>
+    </footer>
+  </div>
+</body>
+</html>
