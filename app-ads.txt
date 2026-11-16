@@ -188,4 +188,7 @@ vidazoo.com, 6ab4e4454da99de3c4d515c9, RESELLER, b6ada874b4d7d0b2
 # Liftoff Monetize, formerly Vungle (bids through Unity LevelPlay): its direct line, from its dashboard
 vungle.com, 6afb2181efb36623c2605529, DIRECT, c107d686becd2d77
 
+# Meta Audience Network (bids through Unity LevelPlay): its direct line, from Monetization Manager
+facebook.com, 3474613549387424, DIRECT, c3e20eee3f780d68
+
 OWNERDOMAIN=zero8eight.github.io
